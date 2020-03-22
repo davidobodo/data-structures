@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stacks</title>
+</head>
+
+<body>
+    <!-- ---------------------------------------- -->
+    <!-- first implementation using arrays -->
+    <!-- ---------------------------------------- -->
+    <!-- <script>
+        var letters = [];
+        var word = 'racecar';
+        var reversedWord = '';
+
+        for (var i = 0; i < word.length; i++) {
+            letters.push(word[1]);
+        }
+
+        for (var i = 0; i < word.length; i++) {
+            rword += letters.pop();
+        }
+
+        if (reversedWord === word) {
+            console.log(word + 'is a palindrome');
+        } else {
+            console.log(word + 'is not a palindrome')
+        }
+    </script> -->
+
+    <!-- ------------------------------------------ -->
+    <!-- second implementation using classes -->
+    <!-- ------------------------------------------ -->
+    <script>
+        function Stack() {
+            this.count = 0;
+            this.storage = {};
+            this.push = function (value) {
+                this.storage[this.count] = value;
+                this.count++;
+            };
+            this.pop = function () {
+                if (this.count === 0) {
+                    return undefined;
+                }
+                this.count--;
+                var result = this.storage[this.count];
+                delete this.storage[this.count];
+                return result;
+            };
+            this.size = function () {
+                return this.count;
+            };
+            this.peek = function () {
+                return this.storage[this.count - 1];
+            };
+        }
+
+        var myStack = new Stack();
+    </script>
+</body>
+
+</html>
