@@ -35,4 +35,5 @@ let dbll = new DoublyLinkedList();
 dbll.push(5);
 dbll.push(6);
 dbll.push(1);
+dbll.push(10);
 console.log(dbll)
