@@ -7,6 +7,32 @@ function Queue() {
     //add at end
     //-------------------------------------------------
 
+    //-------------------------------------------------
+    //For loop implementation
+    //-------------------------------------------------
+
+    // this.enqueue = function (val) {
+    //     let insertPosition = queue.length;
+    //     if (queue.length === 0) {
+    //         return queue.push(val)
+    //     } else {
+    //         for (i = (queue.length - 1); i >= 0; i--) {
+    //             if (val[1] > queue[i][1] && insertPosition !== 0) {
+    //                 insertPosition = insertPosition - 1
+    //             } else if (val[1] > queue[i][1] && insertPosition === 0) {
+    //                 insertPosition = 0
+    //             } else if (val[1] < queue[i][1] && insertPosition === 0) {
+    //                 insertPosition = 1
+    //             }
+    //         }
+    //         return queue.splice(insertPosition, 0, val)
+    //     }
+
+    // }
+
+    //-------------------------------------------------
+    //Higher order array implementation
+    //-------------------------------------------------
     this.enqueue = function (val) {
         queue.push(val)
         queue.sort((a, b) => {
