@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var LinkedlistNode = /** @class */ (function () {
     function LinkedlistNode(theValue, theNext) {
         if (theNext === void 0) { theNext = null; }
@@ -11,4 +11,4 @@ var LinkedlistNode = /** @class */ (function () {
     };
     return LinkedlistNode;
 }());
-exports["default"] = LinkedlistNode;
+exports.default = LinkedlistNode;

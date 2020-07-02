@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Comparator = /** @class */ (function () {
     function Comparator(compareFunction) {
         this.compare = compareFunction || Comparator.defaultCompareFunction;
@@ -31,4 +31,4 @@ var Comparator = /** @class */ (function () {
     };
     return Comparator;
 }());
-exports["default"] = Comparator;
+exports.default = Comparator;

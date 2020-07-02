@@ -25,6 +25,8 @@ class LinkedList {
 }
 
 const david = new LinkedList()
-console.log(david)
+david.prepend(2)
+david.prepend(5)
+console.log(david, 'here')
 
 export default LinkedList

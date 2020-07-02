@@ -1,6 +1,9 @@
 "use strict";
-exports.__esModule = true;
-var linkedlistnode_1 = require("./linkedlistnode");
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var linkedlistnode_1 = __importDefault(require("./linkedlistnode"));
 var LinkedList = /** @class */ (function () {
     function LinkedList() {
         this.head = null;
@@ -8,7 +11,7 @@ var LinkedList = /** @class */ (function () {
         // this.compare = new Comparator(comparatorFunction)
     }
     LinkedList.prototype.prepend = function (value) {
-        var newNode = new linkedlistnode_1["default"](value, this.head);
+        var newNode = new linkedlistnode_1.default(value, this.head);
         this.head = newNode;
         if (!this.tail) {
             this.tail = newNode;
@@ -18,5 +21,7 @@ var LinkedList = /** @class */ (function () {
     return LinkedList;
 }());
 var david = new LinkedList();
-console.log(david);
-exports["default"] = LinkedList;
+david.prepend(2);
+david.prepend(5);
+console.log(david, 'here');
+exports.default = LinkedList;
