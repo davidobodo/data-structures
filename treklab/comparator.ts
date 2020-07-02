@@ -1,7 +1,7 @@
 class Comparator {
     public compare: (a: string | number, b: string | number) => boolean | number;
 
-    constructor(compareFunction: (a: number, b: number) => boolean) {
+    constructor(compareFunction: (a: number | string, b: number | string) => boolean) {
         this.compare = compareFunction || Comparator.defaultCompareFunction
     }
 
@@ -37,3 +37,5 @@ class Comparator {
         this.compare = (a, b) => compareOriginal(b, a)
     }
 }
+
+export default Comparator

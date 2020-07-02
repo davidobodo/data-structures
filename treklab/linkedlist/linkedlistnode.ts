@@ -1,6 +1,6 @@
 class LinkedlistNode {
     public value: number;
-    public next: string;
+    public next: unknown;
 
     constructor(theValue: number, theNext = null) {
         this.value = theValue
@@ -11,3 +11,5 @@ class LinkedlistNode {
         return callback ? callback(this.value) : `${this.value}`
     }
 }
+
+export default LinkedlistNode

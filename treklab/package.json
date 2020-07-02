@@ -1,0 +1,11 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "data structures learnt from treklab",
+  "main": "index.ts",
+  "author": "phitGeek obododavid5@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}
