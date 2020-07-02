@@ -6,7 +6,7 @@
   "author": "phitGeek obododavid5@gmail.com",
   "license": "MIT",
   "scripts": {
-    "tsWatch": "tsc --watch"
+    "ts-watch": "tsc --watch"
   },
   "devDependencies": {
     "typescript": "^3.9.6"

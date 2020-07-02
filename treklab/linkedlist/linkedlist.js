@@ -18,10 +18,25 @@ var LinkedList = /** @class */ (function () {
         }
         return this;
     };
+    LinkedList.prototype.append = function (value) {
+        var newNode = new linkedlistnode_1.default(value);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+            return this;
+        }
+        this.tail.next = newNode;
+        this.tail = newNode;
+        return this;
+    };
     return LinkedList;
 }());
 var david = new LinkedList();
-david.prepend(2);
-david.prepend(5);
-console.log(david, 'here');
+console.log(david);
+david.append(2);
+console.log(david);
+david.append(5);
+console.log(david);
+david.append(6);
+console.log(david);
 exports.default = LinkedList;

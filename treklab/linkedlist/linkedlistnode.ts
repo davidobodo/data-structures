@@ -1,13 +1,13 @@
 class LinkedlistNode {
-    public value: number;
+    public value: number | string;
     public next: unknown;
 
-    constructor(theValue: number, theNext = null) {
+    constructor(theValue: number | string, theNext = null) {
         this.value = theValue
         this.next = theNext
     }
 
-    toString(callback: (val: number) => void) {
+    toString(callback: (val: number | string) => void) {
         return callback ? callback(this.value) : `${this.value}`
     }
 }
