@@ -8,6 +8,8 @@ var LinkedList = /** @class */ (function () {
     function LinkedList() {
         this.head = null;
         this.tail = null;
+        this.length = 0;
+        this.showLinkedList = [];
         // this.compare = new Comparator(comparatorFunction)
     }
     LinkedList.prototype.prepend = function (value) {
@@ -16,6 +18,8 @@ var LinkedList = /** @class */ (function () {
         if (!this.tail) {
             this.tail = newNode;
         }
+        this.showLinkedList.push(newNode);
+        this.length += 1;
         return this;
     };
     LinkedList.prototype.append = function (value) {
@@ -23,20 +27,23 @@ var LinkedList = /** @class */ (function () {
         if (!this.head) {
             this.head = newNode;
             this.tail = newNode;
+            this.showLinkedList.push(newNode);
+            this.length += 1;
             return this;
         }
         this.tail.next = newNode;
         this.tail = newNode;
+        this.showLinkedList.push(newNode);
+        this.length += 1;
         return this;
     };
     return LinkedList;
 }());
 var david = new LinkedList();
-console.log(david);
 david.append(2);
-console.log(david);
-david.append(5);
-console.log(david);
-david.append(6);
+// david.append(5)
+// david.append(6)
+// david.append(7)
+// david.append(8)
 console.log(david);
 exports.default = LinkedList;
