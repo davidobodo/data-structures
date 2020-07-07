@@ -37,13 +37,28 @@ var LinkedList = /** @class */ (function () {
         this.length += 1;
         return this;
     };
+    LinkedList.prototype.delete = function (delValue) {
+        var currentNode;
+        var previousNode;
+        currentNode = this.head;
+        previousNode = this.head;
+        //deleting head node;
+        if (currentNode.value === delValue) {
+            this.head = currentNode.next;
+            this.length -= 1;
+            this.showLinkedList.shift();
+            return;
+        }
+    };
     return LinkedList;
 }());
 var david = new LinkedList();
 david.append(2);
-// david.append(5)
-// david.append(6)
-// david.append(7)
-// david.append(8)
+david.append(5);
+david.append(6);
+david.append(7);
+david.append(8);
+console.log(david);
+david.delete(2);
 console.log(david);
 exports.default = LinkedList;
